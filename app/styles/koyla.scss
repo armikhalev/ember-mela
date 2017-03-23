@@ -1,53 +1,54 @@
-.latayPage {
+.koylaPage {
     position: relative;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 25px;
-}
+    margin: auto;
+    width: 50%;
 
-.flipContainer {
-	perspective: 1000px;
-    position: relative;
-    height: 200px;
-    width: 16%;
-}
+    input[type="text"] {
+        width: 100%;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+        font-size: 30px;
+        color: indianred;
+    }
 
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-	position: relative;
-    text-align: center;
-    font-size: x-large;
-    background-color: darkkhaki;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
+    .formHeader {
+        margin-top: 24px;
+        color: tan;
+        font-size: 24px;
 
-/* hide back of pane during swap */
-.frontCard, .backCard {
-	backface-visibility: hidden;
-    position: absolute;
-    top: 25%;
-}
+        &:first-letter {
+            text-transform:capitalize;
+        }
+    }
 
-/* front pane, placed above back */
-.frontCard {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
+      .formHeader {
+          color: mediumblue;
+          margin: 10px 106px;
+          text-align: center;
+          font-size: large;
+          border-bottom: 1px solid brown;
+    }
 
-/* back, initially hidden pane */
-.backCard {
-	transform: rotateY(180deg);
-}
+    .translationDiv {
+        height: 50px;
+        width: 100%;
+        background-color: beige;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 24px;
+        padding-top: 8%;
+    }
 
-.flipContainer.flip .flipper {
-	transform: rotateY(180deg);
+    .button {
+        margin: 10px 0;
+        background-color: burlywood;
+        padding: 9px;
+        font-size: 14px;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bolder;
+        color: darkcyan;
+    }
 }

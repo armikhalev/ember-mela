@@ -1,10 +1,10 @@
 <div class="latayPage">
-    <div class="flipContainer" v-on:click="flipCard(card)"> 
-        {{#each cards as |card|}}
+    {{#each model as |card|}}
+        <div class="flipContainer {{if card.flip "flip"}}" {{action "flipCard" card}}> 
             <div class="flipper">
                 <div class="card frontCard">{{card.front}}</div>
                 <div class="card backCard">{{card.back}}</div>
             </div>
-        {{/each}}
-    </div>
+        </div>
+    {{/each}}
 </div>

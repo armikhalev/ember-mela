@@ -32,5 +32,11 @@ export default Ember.Route.extend({
         ]
 
         return cards;
+    },
+    actions: {
+        flipCard (_card) {
+            Ember.set(_card, 'flip', !_card.flip)
+            // _card.flip = !_card.flip
+        }
     }
 });
