@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:koyla', 'Unit | Route | koyla', {
+moduleFor('route:koyla/english-word', 'Unit | Route | koyla/english word', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
