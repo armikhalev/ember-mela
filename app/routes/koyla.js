@@ -1,5 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    titleToken: 'Koyla'
+    titleToken: 'Koyla',
+    model() {
+        return this.store.findAll('word');
+    }
 });

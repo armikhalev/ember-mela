@@ -1,17 +1,11 @@
-<div id="koyla_page" class="row text-center col-xs-offset-4 col-xs-4 ">
-
-    <button v-on:click="changeLanguage_onClick" type="submit" id="changeLanguageBtn" class="btn btn-primary">Change language</button>
-
-    <div class="form-group">
-        <label id="languageTranslatedFromHeader" class="formHeader" for="wordToTranslate">{{ langTranslateFrom }}</label>
-        <input  v-on:keyup.enter="getWord(toTranslate)" v-model="toTranslate" type="text" placeholder="Type any word to translate" id="wordToTranslate" class="form-control wordToTranslate"><br>
-        
-    </div>
-
-    <button v-on:click="getWord(toTranslate)" type="submit" id="submitBtn" class="btn btn-success">Submit</button>
-    
-    <div class="row">
-        <label id="languageTranslatedToHeader" class="formHeader">{{ langTranslateTo }}</label>
-        <div id="translation" class="translationDiv well well-lg">{{outlet}}</div>
-    </div>
-</div>
+{{#word-filter
+   filter=(action 'filterByWord')
+   as |words|}}
+  <ul class="">
+    {{#each words as |w|}}
+      <li>{{w.word}}</li>
+      <li>{{w.la}}</li>
+      <li>{{w.comment}}</li>
+    {{/each}}
+  </ul>
+{{/word-filter}}

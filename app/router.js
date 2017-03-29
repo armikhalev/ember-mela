@@ -7,9 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('koyla', {path: '/'}, function() {
-    this.route('english', {path: '/koyla/:word'});
-  });
+  this.route('koyla', {path: '/'});
   this.route('latay');
   this.route('word', {path: '/words'});
 });
