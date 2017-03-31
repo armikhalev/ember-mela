@@ -1,11 +1,5 @@
-import DRFAdapter from './drf';
+import ApplicationAdapter from './application';
 
-export default DRFAdapter.extend({
-      host: 'http://localhost:8000',
-      namespace: 'koyla',
-      addTrailingSlashes: false,
-      coalesceFindRequests: true,
-      pathForType(modelName) {
-            return modelName;
-      }
+export default ApplicationAdapter.extend({
+
 });
