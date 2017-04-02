@@ -1,11 +1,28 @@
-{{#word-filter
-   filter=(action 'filterByWord')
-   as |words|}}
-  <ul class="">
-    {{#each words as |w|}}
-      <li>{{w.word}}</li>
-      <li>{{w.la}}</li>
-      <li>{{w.comment}}</li>
-    {{/each}}
-  </ul>
-{{/word-filter}}
+<div id="koyla_page" class="row text-center col-xs-offset-4 col-xs-4 ">
+
+  <button {{action "changeLanguage_onClick"}} type="submit" id="changeLanguageBtn" class="btn btn-primary">Change language</button>
+
+
+  <div class="form-group">
+    <label id="languageTranslatedFromHeader" class="formHeader" for="wordToTranslate">{{ langTranslateFrom }}</label>
+    
+    {{#word-filter
+      filter=(action 'filterByWord')
+      as |words|}}
+
+      <div class="row">
+        <label id="languageTranslatedToHeader" class="formHeader">{{ langTranslateTo }}</label>
+        <ul class="translationDiv well well-lg list-unstyled">
+          {{#each words as |w|}}
+            <li><b>English:</b> {{w.word}}</li>
+            <li><b>Mela:</b> {{w.la}}</li>
+            <li><b>Comment:</b> {{w.comment}}</li>
+            <li>.........................</li><br>
+          {{/each}}
+        </ul>
+      </div>
+
+    {{/word-filter}}
+
+  </div>
+</div>
