@@ -6,23 +6,43 @@
   <div class="form-group">
     <label id="languageTranslatedFromHeader" class="formHeader" for="wordToTranslate">{{ langTranslateFrom }}</label>
     
-    {{#word-filter
-      filter=(action 'filterByWord')
-      as |words|}}
+    {{#if english}}
+      {{#word-filter
+        filter=(action 'filterByWord')
+        as |words|}}
 
-      <div class="row">
-        <label id="languageTranslatedToHeader" class="formHeader">{{ langTranslateTo }}</label>
-        <ul class="translationDiv well well-lg list-unstyled">
-          {{#each words as |w|}}
-            <li><b>English:</b> {{w.word}}</li>
-            <li><b>Mela:</b> {{w.la}}</li>
-            <li><b>Comment:</b> {{w.comment}}</li>
-            <li>.........................</li><br>
-          {{/each}}
-        </ul>
-      </div>
+        <div class="row">
+          <label id="languageTranslatedToHeader" class="formHeader">Mela</label>
+          <ul class="translationDiv well well-lg list-unstyled">
+            {{#each words as |w|}}
+              <li><b>English:</b> {{w.word}}</li>
+              <li><b>Mela:</b> {{w.la}}</li>
+              <li><b>Notes:</b> {{w.comment}}</li>
+              <li>.........................</li><br>
+            {{/each}}
+          </ul>
+        </div>
 
-    {{/word-filter}}
+      {{/word-filter}}
+    {{else}}
+      {{#word-filter
+        filter=(action 'filterByLa')
+        as |las|}}
+
+        <div class="row">
+          <label id="languageTranslatedToHeader" class="formHeader">English</label>
+          <ul class="translationDiv well well-lg list-unstyled">
+            {{#each las as |la|}}
+              <li><b>Mela:</b> {{la.la}}</li>
+              <li><b>Engila:</b> {{la.word}}</li>
+              <li><b>Dasayna:</b> {{la.comment}}</li>
+              <li>.........................</li><br>
+            {{/each}}
+          </ul>
+        </div>
+
+      {{/word-filter}}
+    {{/if}}
 
   </div>
 </div>

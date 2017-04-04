@@ -9,7 +9,6 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('koyla', {path: '/'});
   this.route('latay');
-  this.route('word', {path: '/words'});
 });
 
 export default Router;
