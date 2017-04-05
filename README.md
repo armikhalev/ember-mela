@@ -16,3 +16,8 @@ Aurelia project needed to run the app files are 701Kb Minified by the cli in pro
 Angular project needed to run the app files are 898.6kb Minified by the cli in production mode and aot. Time spent about 4 hours not including configuration and learning of the basics. Notice that Angular project is reusing some of the styles and approaches from the Aurelia project.
 
 VueJS with the standard command 'npm run build' created many files 1.4mB in size, but by exluding .map.js files it became only 235kb. Time spent on the project, about 3hours.
+
+This project, EmberJS, using ember-cli command 'ember build --environment=production' it produced 1Mb total of files needed to run the app. Time spent on the project, about 20hours, also time spent on learning EmberJS was about 48-60 hours.
+Nevertheless, EmberJS taught me a lot, it forced me to make this app better and more robust, it is the only framework where I started to use tests. It might sound paradoxical after all the numbers above but 
+
+I consider EmberJS the framework I want to build this project in.
