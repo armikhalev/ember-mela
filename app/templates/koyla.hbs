@@ -5,14 +5,14 @@
 
   <div class="form-group">
     <label id="languageTranslatedFromHeader" class="formHeader" for="wordToTranslate">{{ langTranslateFrom }}</label>
-    
+
     {{#if english}}
       {{#word-filter
         filter=(action 'filterByWord')
         as |words|}}
 
         <div class="row">
-          <label id="languageTranslatedToHeader" class="formHeader">Mela</label>
+          <label class="formHeader languageTranslatedToHeader">Mela</label>
           <ul class="translationDiv well well-lg list-unstyled">
             {{#each words as |w|}}
               <li><b>English:</b> {{w.word}}</li>
@@ -30,7 +30,7 @@
         as |las|}}
 
         <div class="row">
-          <label id="languageTranslatedToHeader" class="formHeader">English</label>
+          <label class="formHeader languageTranslatedToHeader">English</label>
           <ul class="translationDiv well well-lg list-unstyled">
             {{#each las as |la|}}
               <li><b>Mela:</b> {{la.la}}</li>
